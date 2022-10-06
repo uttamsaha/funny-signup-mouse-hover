@@ -18,30 +18,35 @@ password.addEventListener("keyup", () => {
     btn.style.left = "0px";
   }
 
-  btn.addEventListener("mouseover", () => {
-    const passwordValue = document.getElementById("pass").value;
-    if (passwordValue.length < 8) {
-      btn.style.position = "absolute";
-      btn.style.bottom = "-50px";
-      console.log("width", elemWidth);
-      console.log("Top", eleTop);
-      if (elemWidth == eleTop) {
-        btn.style.right = "0px";
-        elemWidth = elemWidth + parseInt("38px");
-        btn.style.removeProperty("left");
-      } else {
+  document.querySelector(".trans").addEventListener("mouseover", async (event) => {
+    // const passwordValue = document.getElementById("pass").value;
+    // console.log("password ln", passwordValue.length);
+
+    btn.style.position = "absolute";
+    btn.style.bottom = "-50px";
+    console.log("width", elemWidth);
+    console.log("Top", eleTop);
+      if (elemWidth != eleTop) {
+        btn.style.removeProperty("right");
         btn.style.left = "0px";
         elemWidth = elemWidth - parseInt("38px");
+        event.stopImmediatePropagation();
+        // return;
+      } else {
+        btn.style.removeProperty("left");
+        btn.style.right = "0px";
+        elemWidth = elemWidth + parseInt("38px");
+        event.stopImmediatePropagation();
+        // return;
       }
-    }
   });
 });
 
-btn.addEventListener("click",()=>{
+btn.addEventListener("click", () => {
   swal({
     title: "Good job!",
     text: "Account Created!",
     icon: "success",
     button: "Ok!",
   });
-})
+});
