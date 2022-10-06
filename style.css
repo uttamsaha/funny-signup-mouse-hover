@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;600;700&family=Roboto:wght@400;500;700&display=swap');
+.input-area{
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    margin: 0 auto;
+    margin-top: 200px;
+    position: relative;
+}
+.input-area h1{
+    font-family: 'Lobster', cursive;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-size: 44px;
+}
+.input-area input{
+    height: 50px;
+    padding: 0px 10px;
+    font-size: 16px;
+    margin-bottom: 14px;
+    border: none;
+    outline: none;
+    background-color: rgba(220, 220, 220, 0.575);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+.input-area input::placeholder{
+    color: rgba(128, 128, 128, 0.633);
+}
+.input-area button{
+    width: 150px;
+    height: 50px;
+    border: none;
+    background-color: rgba(0, 0, 255, 0.714);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 17px;
+    font-family: 'Poppins', sans-serif;
+}
