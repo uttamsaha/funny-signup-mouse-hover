@@ -1,6 +1,7 @@
 const btn = document.getElementById("btn");
 const password = document.getElementById("pass");
 let elemWidth = btn.offsetTop;
+let eleTop = elemWidth;
 
 password.addEventListener("keyup", () => {
   const passwordValue = document.getElementById("pass").value;
@@ -22,14 +23,15 @@ password.addEventListener("keyup", () => {
     if (passwordValue.length < 8) {
       btn.style.position = "absolute";
       btn.style.bottom = "-50px";
-      console.log(elemWidth);
-      if (elemWidth >= 267) {
+      console.log("width", elemWidth);
+      console.log("Top", eleTop);
+      if (elemWidth == eleTop) {
         btn.style.right = "0px";
-        elemWidth = elemWidth - parseInt("38px");
+        elemWidth = elemWidth + parseInt("38px");
         btn.style.removeProperty("left");
       } else {
         btn.style.left = "0px";
-        elemWidth = elemWidth + parseInt("38px");
+        elemWidth = elemWidth - parseInt("38px");
       }
     }
   });
