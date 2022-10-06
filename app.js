@@ -23,13 +23,13 @@ password.addEventListener("keyup", () => {
       btn.style.position = "absolute";
       btn.style.bottom = "-50px";
       console.log(elemWidth);
-      if (elemWidth == 334) {
+      if (elemWidth >= 267) {
         btn.style.right = "0px";
-        elemWidth = elemWidth + parseInt("38px");
+        elemWidth = elemWidth - parseInt("38px");
         btn.style.removeProperty("left");
       } else {
         btn.style.left = "0px";
-        elemWidth = elemWidth - parseInt("38px");
+        elemWidth = elemWidth + parseInt("38px");
       }
     }
   });
