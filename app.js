@@ -36,3 +36,12 @@ password.addEventListener("keyup", () => {
     }
   });
 });
+
+btn.addEventListener("click",()=>{
+  swal({
+    title: "Good job!",
+    text: "Account Created!",
+    icon: "success",
+    button: "Ok!",
+  });
+})
