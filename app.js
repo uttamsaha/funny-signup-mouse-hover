@@ -18,28 +18,32 @@ password.addEventListener("keyup", () => {
     btn.style.left = "0px";
   }
 
-  document.querySelector(".trans").addEventListener("mouseover", async (event) => {
-    // const passwordValue = document.getElementById("pass").value;
-    // console.log("password ln", passwordValue.length);
+  document
+    .querySelector(".trans")
+    .addEventListener("mouseover", async (event) => {
+      const passwordValue = document.getElementById("pass").value;
+      // console.log("password ln", passwordValue.length);
 
-    btn.style.position = "absolute";
-    btn.style.bottom = "-50px";
-    console.log("width", elemWidth);
-    console.log("Top", eleTop);
-      if (elemWidth != eleTop) {
-        btn.style.removeProperty("right");
-        btn.style.left = "0px";
-        elemWidth = elemWidth - parseInt("38px");
-        event.stopImmediatePropagation();
-        // return;
-      } else {
-        btn.style.removeProperty("left");
-        btn.style.right = "0px";
-        elemWidth = elemWidth + parseInt("38px");
-        event.stopImmediatePropagation();
-        // return;
+      if (passwordValue.length < 8) {
+        btn.style.position = "absolute";
+        btn.style.bottom = "-50px";
+        console.log("width", elemWidth);
+        console.log("Top", eleTop);
+        if (elemWidth != eleTop) {
+          btn.style.removeProperty("right");
+          btn.style.left = "0px";
+          elemWidth = elemWidth - parseInt("38px");
+          event.stopImmediatePropagation();
+          // return;
+        } else {
+          btn.style.removeProperty("left");
+          btn.style.right = "0px";
+          elemWidth = elemWidth + parseInt("38px");
+          event.stopImmediatePropagation();
+          // return;
+        }
       }
-  });
+    });
 });
 
 btn.addEventListener("click", () => {
