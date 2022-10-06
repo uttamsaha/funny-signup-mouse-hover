@@ -23,7 +23,7 @@ password.addEventListener("keyup", () => {
       btn.style.position = "absolute";
       btn.style.bottom = "-50px";
       console.log(elemWidth);
-      if (elemWidth == 267) {
+      if (elemWidth == 334) {
         btn.style.right = "0px";
         elemWidth = elemWidth + parseInt("38px");
         btn.style.removeProperty("left");
